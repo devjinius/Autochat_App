@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">컴퓨터와의 채팅</string>
+    <string name="action_settings">설정</string>
+    <string name="hello">안녕</string>
+    <string name="send">보내기</string>
+    <string name="how_are_you">안녕</string>
+    <string name="fine">안녕하세요</string>
+    <string name="tire">피곤</string>
+    <string name="bless_you">고생했어요</string>
+    <string name="fortune">운세</string>
+    <string name="worst_luck">몹시 나쁨</string>
+    <string name="bad_luck">나쁨</string>
+    <string name="good_luck">보통</string>
+    <string name="nice_luck">행운</string>
+    <string name="best_luck">대박</string>
+    <string name="time">시간</string>
+    <string name="time_format">현재 시각은 %1$d시 %2$d분 %3$d초 입니다.</string>
+    <string name="good">그거 괜찮네요</string>
+    <string name="your_fortune_is">당신의 운세는</string>
+</resources>

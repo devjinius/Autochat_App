@@ -1,4 +1,20 @@
 <resources>
-    <string name="app_name">Chat Application</string>
+    <string name="app_name">Auto_Chat</string>
     <string name="action_settings">Settings</string>
+    <string name="hello">Hello</string>
+    <string name="send">SEND</string>
+    <string name="how_are_you">how are you</string>
+    <string name="fine">Fine</string>
+    <string name="tire">tire</string>
+    <string name="bless_you">Bless You</string>
+    <string name="fortune">fortune</string>
+    <string name="worst_luck">Worst Luck</string>
+    <string name="bad_luck">Bad Luck</string>
+    <string name="good_luck">Good Luck</string>
+    <string name="nice_luck">Nice Luck</string>
+    <string name="best_luck">Best Luck</string>
+    <string name="time">time</string>
+    <string name="time_format">The time is %1$d:%2$d:%3$d</string>
+    <string name="good">Good</string>
+    <string name="your_fortune_is">Your fortune is</string>
 </resources>

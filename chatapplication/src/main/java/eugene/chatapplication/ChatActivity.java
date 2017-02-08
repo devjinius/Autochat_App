@@ -61,7 +61,7 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v.equals(mSendMessage)) {
             String inputText = mInputMessage.getText().toString(); // 입력받은 메세지 변수에 저장
-
+            String lowerInputText = inputText.toLowerCase();
 
             //사용자의 입력 누적하여 로그에 저장
             TextView userMessage = new TextView(this);
@@ -84,22 +84,28 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
 
             //cpu의 조건에 따른 답변
             String answer;
-            if (inputText.contains("안녕") || inputText.contains("hi")){
-                answer = "안녕하세요.";
-            } else if (inputText.contains("피곤")) { //피곤이 포함됐을때 답변
-                answer = "고생하셨어요.";
-            } else if (inputText.contains("운세")) { // 운세가 포함되면 5가지 중에 한가지로 답변
-                String[] luck = {"대박", "행운", "보통", "나쁨", "몹시 나쁨"}; // 확률이 같다 나중에 확률수정
+            if (lowerInputText.contains(getString(R.string.how_are_you))){
+                answer = getString(R.string.fine);
+            } else if (lowerInputText.contains(getString(R.string.tire))) { //피곤이 포함됐을때 답변
+                answer = getString(R.string.bless_you);
+            } else if (lowerInputText.contains(getString(R.string.fortune))) {
+                // 운세가 포함되면 5가지 중에 한가지로 답변
+                int[] luck = {R.string.best_luck,
+                        R.string.nice_luck,
+                        R.string.good_luck,
+                        R.string.bad_luck,
+                        R.string.worst_luck}; // 확률이 같다 나중에 확률수정
+                //int 배열로 저장후 나중에 getString 으로 출력
                 int randomIndex = (int) (Math.random() * 5);
-                answer = "당신의 운세는 " + luck[randomIndex] + "입니다.";
-            } else if (inputText.contains("시간")) { // 시간이 포함되면 현재 시각을 보여준다.
+                answer = getString(R.string.your_fortune_is) + getString(luck[randomIndex]);
+            } else if (lowerInputText.contains(getString(R.string.time))) { // 시간이 포함되면 현재 시각을 보여준다.
                 Calendar cal = Calendar.getInstance();
                 int hour = cal.get(Calendar.HOUR);
                 int minute = cal.get(Calendar.MINUTE);
                 int second = cal.get(Calendar.SECOND);
-                answer = String.format("현재 시각은 %d시 %d분 %d초입니다.", hour, minute, second);
+                answer = getString(R.string.time_format, hour, minute, second);
             } else {
-                answer = "그거 괜찮네요";
+                answer = getString(R.string.good);
             }
             final TextView cpuMessage = new TextView(this); //send 누를 때 마다 누적하여 생성
             cpuMessage.setTextColor(messageColor);

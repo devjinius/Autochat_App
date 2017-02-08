@@ -10,15 +10,6 @@ android:paddingTop="@dimen/activity_vertical_margin"
 app:layout_behavior="@string/appbar_scrolling_view_behavior"
 tools:context="eugene.chatapplication.ChatActivity" tools:showIn="@layout/activity_chat">
 
-    <Button
-        android:text="SEND"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/send_message"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,12 +40,21 @@ tools:context="eugene.chatapplication.ChatActivity" tools:showIn="@layout/activi
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:text="안녕하세요"
+                android:text="@string/hello"
                 android:id="@+id/cpu_message"
                 android:background="@drawable/cpu_message"
                 android:layout_marginTop="@dimen/message_margin"
                 android:textColor="@color/message_color" />
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:text="@string/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/send_message"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
